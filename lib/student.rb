@@ -38,7 +38,7 @@ def initialize (name, grade, id = nil)
       VALUES (?, ?)
     SQL
 
-    DB[:conn].execute(sql, self.initialize)
+    DB[:conn].execute(sql, self.name, self.grade)
   end
 
   def self.create(name:, grade:)
